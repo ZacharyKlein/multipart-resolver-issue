@@ -1,7 +1,7 @@
 <html>
 
 <body>
-<h1>Upload</h1>
+<h1>Upload (Max 15Mb)</h1>
 
 
 <g:if test="${flash.message}">
