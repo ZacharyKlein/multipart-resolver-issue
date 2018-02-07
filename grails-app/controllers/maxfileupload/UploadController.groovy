@@ -1,9 +1,8 @@
 package maxfileupload
 
-import demo.NcJJMultipartResolver
+import demo.CustomMultipartResolver
 import demo.Upload
 import grails.validation.Validateable
-import org.springframework.validation.BindingResult
 import org.springframework.web.multipart.MultipartFile
 
 class UploadController {
@@ -18,7 +17,7 @@ class UploadController {
         //println params
         println uploadCmd.file
 
-        if (request.getAttribute(NcJJMultipartResolver.FILE_SIZE_EXCEEDED_ERROR)) {
+        if (request.getAttribute(CustomMultipartResolver.FILE_SIZE_EXCEEDED_ERROR)) {
             println "File size exceeded!"
             flash.message = "File size exceeded!"
 
